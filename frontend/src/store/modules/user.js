@@ -22,6 +22,7 @@ export const useUserStore = defineStore('user', () => {
   const token = ref(localStorage.getItem(TOKEN_KEY) || '');
   const userInfo = ref(parseUserInfoFromLocal());
   const isLogin = computed(() => Boolean(token.value));
+  const authToken = computed(() => token.value);
 
   function setToken(value) {
     token.value = value || '';
@@ -50,6 +51,7 @@ export const useUserStore = defineStore('user', () => {
     token,
     userInfo,
     isLogin,
+    authToken,
     setToken,
     setUserInfo,
     clearLogin

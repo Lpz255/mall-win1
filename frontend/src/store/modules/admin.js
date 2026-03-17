@@ -25,6 +25,8 @@ export const useAdminStore = defineStore('admin', () => {
   const permissions = ref(parseJson(ADMIN_PERMISSIONS_KEY, []));
 
   const isAdminLogin = computed(() => Boolean(adminToken.value));
+  const authToken = computed(() => adminToken.value);
+  const permissionList = computed(() => permissions.value);
 
   function setAdminToken(value) {
     adminToken.value = value || '';
@@ -54,7 +56,7 @@ export const useAdminStore = defineStore('admin', () => {
     if (!permissionCode) {
       return true;
     }
-    return permissions.value.includes('*') || permissions.value.includes(permissionCode);
+    return permissionList.value.includes('*') || permissionList.value.includes(permissionCode);
   }
 
   function clearAdminLogin() {
@@ -68,6 +70,8 @@ export const useAdminStore = defineStore('admin', () => {
     adminInfo,
     permissions,
     isAdminLogin,
+    authToken,
+    permissionList,
     setAdminToken,
     setAdminInfo,
     setPermissions,

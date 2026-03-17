@@ -1,7 +1,130 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import { ElMessage } from 'element-plus';
+import { getActivePinia } from 'pinia';
+import { useAdminStore } from '@/store/modules/admin';
+import { useUserStore } from '@/store/modules/user';
 import { webRoutes } from './modules/web';
 import { adminLoginRoute, adminRoutes } from './modules/admin';
+
+function getAuthStores() {
+  const activePinia = getActivePinia();
+  if (!activePinia) {
+    return {
+      userStore: null,
+      adminStore: null
+    };
+  }
+
+  return {
+    userStore: useUserStore(activePinia),
+    adminStore: useAdminStore(activePinia)
+  };
+}
+
+function getRouteRedirect(to, fallbackPath) {
+  return typeof to.query.redirect === 'string' ? to.query.redirect : fallbackPath;
+}
+
+function redirectToLogin(next, to, isAdminRoute) {
+  next({
+    path: isAdminRoute ? '/admin/login' : '/web/login',
+    query: {
+      redirect: to.fullPath
+    }
+  });
+}
+
+function applyDocumentTitle(to) {
+  if (to.meta?.title) {
+    document.title = `${to.meta.title} - 电商前端基础工程`;
+    return;
+  }
+
+  document.title = '电商前端基础工程';
+}
+
+function clearAdminSession(adminStore) {
+  adminStore?.clearAdminLogin();
+}
+
+function hasAdminRoutePermission(adminStore, permissionCode) {
+  return adminStore?.hasPermission(permissionCode) ?? false;
+}
+
+function isAuthenticated(store, tokenKey) {
+  if (!store) {
+    return false;
+  }
+
+  return Boolean(store[tokenKey]);
+}
+
+function isAdminAuthenticated(adminStore) {
+  return isAuthenticated(adminStore, 'authToken');
+}
+
+function isUserAuthenticated(userStore) {
+  return isAuthenticated(userStore, 'authToken');
+}
+
+function redirectAuthenticatedUser(next, to, fallbackPath) {
+  next(getRouteRedirect(to, fallbackPath));
+}
+
+function handleAdminPermissionDenied(next, to, adminStore) {
+  ElMessage.error('当前账号无后台权限，请重新登录');
+  clearAdminSession(adminStore);
+  redirectToLogin(next, to, true);
+}
+
+function handleMissingAuth(next, to, isAdminRoute) {
+  ElMessage.warning('请先登录后再访问该页面');
+  redirectToLogin(next, to, isAdminRoute);
+}
+
+function isAdminRoutePath(path) {
+  return path.startsWith('/admin');
+}
+
+function isAdminLoginPath(path) {
+  return path === '/admin/login';
+}
+
+function isWebLoginPath(path) {
+  return path === '/web/login';
+}
+
+function isRouteLoginSatisfied(isAdminRoute, userStore, adminStore) {
+  return isAdminRoute ? isAdminAuthenticated(adminStore) : isUserAuthenticated(userStore);
+}
+
+function redirectIfAlreadyLoggedIn(to, next, userStore, adminStore) {
+  if (isWebLoginPath(to.path) && isUserAuthenticated(userStore)) {
+    redirectAuthenticatedUser(next, to, '/web/index');
+    return true;
+  }
+
+  if (isAdminLoginPath(to.path) && isAdminAuthenticated(adminStore)) {
+    redirectAuthenticatedUser(next, to, '/admin/index');
+    return true;
+  }
+
+  return false;
+}
+
+function ensureAdminPermission(to, next, adminStore) {
+  const requiredPermission = to.meta?.permission;
+  if (!requiredPermission) {
+    return true;
+  }
+
+  if (hasAdminRoutePermission(adminStore, requiredPermission)) {
+    return true;
+  }
+
+  handleAdminPermissionDenied(next, to, adminStore);
+  return false;
+}
 
 const routes = [
   {
@@ -32,81 +155,26 @@ const router = createRouter({
 });
 
 router.beforeEach((to, _from, next) => {
-  const userToken = localStorage.getItem('token');
-  const adminToken = localStorage.getItem('admin_token');
+  const { userStore, adminStore } = getAuthStores();
   const needAuth = to.matched.some((record) => record.meta.requiresAuth);
-  const isAdminRoute = to.path.startsWith('/admin');
-  const routeToken = isAdminRoute ? adminToken : userToken;
-  const requiredPermission = to.meta?.permission;
-  const permissionList = parsePermissionList();
+  const isAdminRoute = isAdminRoutePath(to.path);
 
-  if (to.meta?.title) {
-    document.title = `${to.meta.title} - 电商前端基础工程`;
-  } else {
-    document.title = '电商前端基础工程';
-  }
+  applyDocumentTitle(to);
 
-  if (needAuth && !routeToken) {
-    ElMessage.warning('请先登录后再访问该页面');
-    next({
-      path: isAdminRoute ? '/admin/login' : '/web/login',
-      query: {
-        redirect: to.fullPath
-      }
-    });
+  if (needAuth && !isRouteLoginSatisfied(isAdminRoute, userStore, adminStore)) {
+    handleMissingAuth(next, to, isAdminRoute);
     return;
   }
 
-  if (to.path === '/web/login' && userToken) {
-    const redirectPath = typeof to.query.redirect === 'string' ? to.query.redirect : '/web/index';
-    next(redirectPath);
+  if (redirectIfAlreadyLoggedIn(to, next, userStore, adminStore)) {
     return;
   }
 
-  if (to.path === '/admin/login' && adminToken) {
-    const redirectPath = typeof to.query.redirect === 'string' ? to.query.redirect : '/admin/index';
-    next(redirectPath);
-    return;
-  }
-
-  // 后台路由鉴权：若路由声明了 permission，则校验是否拥有按钮/页面级权限
-  if (isAdminRoute && requiredPermission && !hasPermission(requiredPermission, permissionList)) {
-    ElMessage.error('当前账号无后台权限，请重新登录');
-    localStorage.removeItem('admin_token');
-    localStorage.removeItem('admin_info');
-    localStorage.removeItem('admin_permissions');
-    next({
-      path: '/admin/login',
-      query: {
-        redirect: to.fullPath
-      }
-    });
+  if (isAdminRoute && !ensureAdminPermission(to, next, adminStore)) {
     return;
   }
 
   next();
 });
-
-function parsePermissionList() {
-  const text = localStorage.getItem('admin_permissions');
-  if (!text) {
-    return [];
-  }
-
-  try {
-    const value = JSON.parse(text);
-    return Array.isArray(value) ? value : [];
-  } catch (_error) {
-    localStorage.removeItem('admin_permissions');
-    return [];
-  }
-}
-
-function hasPermission(permissionCode, permissionList) {
-  if (!permissionCode) {
-    return true;
-  }
-  return permissionList.includes('*') || permissionList.includes(permissionCode);
-}
 
 export default router;

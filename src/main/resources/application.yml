@@ -19,9 +19,9 @@ spring:
       max-request-size: 10MB
 
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/mall_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: 1234
+    url: ${DB_URL:jdbc:mysql://127.0.0.1:3306/mall_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:1234}
     driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       maximum-pool-size: 30
@@ -33,9 +33,10 @@ spring:
   data:
     redis:
       client-type: lettuce
-      host: localhost
-      port: 6379
-      timeout: 2000ms
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: ${REDIS_TIMEOUT:2000ms}
       lettuce:
         pool:
           max-active: 200
@@ -44,8 +45,11 @@ spring:
           max-wait: 1000ms
 
   rabbitmq:
-    host: localhost
-    port: 5672
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:guest}
+    password: ${RABBITMQ_PASSWORD:guest}
+    virtual-host: ${RABBITMQ_VHOST:/}
     publisher-confirm-type: correlated
     publisher-returns: true
     dynamic: false
@@ -98,15 +102,15 @@ auth:
 
 storage:
   minio:
-    endpoint: http://127.0.0.1:9000
-    public-endpoint: http://127.0.0.1:9000
-    access-key: minioadmin
-    secret-key: minioadmin
-    bucket: mall-demo
-    product-image-dir: product
-    max-image-size-mb: 5
-    auto-create-bucket: true
-    auto-set-public-read: true
+    endpoint: ${MINIO_ENDPOINT:http://127.0.0.1:9000}
+    public-endpoint: ${MINIO_PUBLIC_ENDPOINT:http://127.0.0.1:9000}
+    access-key: ${MINIO_ACCESS_KEY:minioadmin}
+    secret-key: ${MINIO_SECRET_KEY:minioadmin}
+    bucket: ${MINIO_BUCKET:mall-demo}
+    product-image-dir: ${MINIO_PRODUCT_IMAGE_DIR:product}
+    max-image-size-mb: ${MINIO_MAX_IMAGE_SIZE_MB:5}
+    auto-create-bucket: ${MINIO_AUTO_CREATE_BUCKET:true}
+    auto-set-public-read: ${MINIO_AUTO_SET_PUBLIC_READ:true}
 
 logging:
   level:

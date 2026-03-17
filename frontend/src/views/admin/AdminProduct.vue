@@ -120,7 +120,7 @@
 
       <template #footer>
         <el-button @click="dialogVisible = false">取消</el-button>
-        <el-button type="primary" color="#1677ff" @click="submitDialog">
+        <el-button type="primary" color="#1677ff" @click="submitProductDialog">
           {{ dialogMode === 'create' ? '确认新增' : '确认保存' }}
         </el-button>
       </template>
@@ -129,18 +129,10 @@
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 import { ElMessage } from 'element-plus';
-import {
-  clearProductCache,
-  createAdminProductApi,
-  deleteAdminProductApi,
-  getAdminProductListApi,
-  getProductCategoryApi,
-  toggleAdminProductStatusApi,
-  uploadAdminProductImageApi,
-  updateAdminProductApi
-} from '@/api';
+import { getProductCategoryApi } from '@/api';
+import { useAdminProduct } from '@/hooks/use_admin_product';
 import AdminActionButtons from '@/components/admin/AdminActionButtons.vue';
 import AdminSearchForm from '@/components/admin/AdminSearchForm.vue';
 
@@ -148,37 +140,27 @@ const statusOptions = [
   { label: '上架中', value: 'on_sale' },
   { label: '已下架', value: 'off_sale' }
 ];
-const MAX_IMAGE_SIZE_MB = 5;
 
-const searchForm = reactive({
-  keyword: '',
-  categoryId: '',
-  status: ''
-});
-
-const pagination = reactive({
-  pageNum: 1,
-  pageSize: 10,
-  total: 0
-});
+const {
+  searchForm,
+  pagination,
+  tableData,
+  dialogVisible,
+  dialogMode,
+  imageUploading,
+  dialogForm,
+  resetSearchForm,
+  loadProductList,
+  openCreateDialog,
+  buildRowActions,
+  handleImageUpload,
+  handleRowAction,
+  submitDialog,
+  validateImageFile
+} = useAdminProduct();
 
 const categoryOptions = ref([]);
-const tableData = ref([]);
-
-const dialogVisible = ref(false);
-const dialogMode = ref('create');
 const dialogFormRef = ref();
-const imageUploading = ref(false);
-const dialogForm = reactive({
-  id: null,
-  name: '',
-  categoryId: '',
-  price: 99,
-  stock: 1,
-  status: 'on_sale',
-  image: '',
-  description: ''
-});
 
 const dialogRules = {
   name: [{ required: true, message: '请输入商品名称', trigger: 'blur' }],
@@ -225,36 +207,22 @@ async function loadCategories() {
   }
 }
 
-async function loadProductList() {
-  const params = {
-    pageNum: pagination.pageNum,
-    pageSize: pagination.pageSize,
-    keyword: searchForm.keyword || undefined,
-    categoryId: searchForm.categoryId || undefined,
-    status: searchForm.status || undefined
-  };
-  try {
-    const data = await getAdminProductListApi(params);
-    const list = normalizeArray(data);
-    tableData.value = list;
-    pagination.total = Number(data?.total || data?.count || list.length || 0);
-  } catch (_error) {
-    tableData.value = [];
-    pagination.total = 0;
-  }
+function beforeImageUpload(file) {
+  return validateImageFile(file);
+}
+
+function resetAndReloadList() {
+  pagination.pageNum = 1;
+  loadProductList();
 }
 
 function handleSearch() {
-  pagination.pageNum = 1;
-  loadProductList();
+  resetAndReloadList();
 }
 
 function handleReset() {
-  searchForm.keyword = '';
-  searchForm.categoryId = '';
-  searchForm.status = '';
-  pagination.pageNum = 1;
-  loadProductList();
+  resetSearchForm();
+  resetAndReloadList();
 }
 
 function onPageChange(value) {
@@ -268,136 +236,9 @@ function onPageSizeChange(value) {
   loadProductList();
 }
 
-function openCreateDialog() {
-  dialogMode.value = 'create';
-  resetDialogForm();
-  dialogVisible.value = true;
-}
-
-function openEditDialog(row) {
-  dialogMode.value = 'edit';
-  dialogForm.id = row.id || row.productId || null;
-  dialogForm.name = row.name || row.productName || '';
-  dialogForm.categoryId = row.categoryId || '';
-  dialogForm.price = Number(row.price || row.salePrice || 0);
-  dialogForm.stock = Number(row.stock || 1);
-  dialogForm.status = isOnSale(row.status) ? 'on_sale' : 'off_sale';
-  dialogForm.image = row.image || row.cover || '';
-  dialogForm.description = row.description || '';
-  dialogVisible.value = true;
-}
-
-function beforeImageUpload(file) {
-  const isImage = String(file?.type || '').startsWith('image/');
-  if (!isImage) {
-    ElMessage.warning('只能上传图片文件');
-    return false;
-  }
-
-  const sizeInMb = Number(file?.size || 0) / 1024 / 1024;
-  if (sizeInMb > MAX_IMAGE_SIZE_MB) {
-    ElMessage.warning(`图片大小不能超过${MAX_IMAGE_SIZE_MB}MB`);
-    return false;
-  }
-  return true;
-}
-
-async function handleImageUpload(option) {
-  const formData = new FormData();
-  formData.append('file', option.file);
-  imageUploading.value = true;
-  try {
-    const data = await uploadAdminProductImageApi(formData);
-    const imageUrl = data?.url || '';
-    if (!imageUrl) {
-      throw new Error('上传成功但未返回图片URL');
-    }
-    dialogForm.image = imageUrl;
-    ElMessage.success('图片上传成功');
-    option.onSuccess?.(data);
-  } catch (error) {
-    option.onError?.(error);
-  } finally {
-    imageUploading.value = false;
-  }
-}
-
-async function submitDialog() {
+async function submitProductDialog() {
   await dialogFormRef.value?.validate();
-
-  const payload = {
-    id: dialogForm.id || undefined,
-    name: dialogForm.name,
-    categoryId: dialogForm.categoryId,
-    price: Number(dialogForm.price),
-    stock: Number(dialogForm.stock),
-    status: dialogForm.status,
-    image: dialogForm.image,
-    description: dialogForm.description
-  };
-
-  if (dialogMode.value === 'create') {
-    await createAdminProductApi(payload);
-    ElMessage.success('商品新增成功');
-  } else {
-    await updateAdminProductApi(payload);
-    ElMessage.success('商品编辑成功');
-  }
-  clearProductCache();
-
-  dialogVisible.value = false;
-  loadProductList();
-}
-
-function buildRowActions(row) {
-  const nextStatus = isOnSale(row.status) ? 'off_sale' : 'on_sale';
-  return [
-    {
-      key: 'edit',
-      label: '编辑',
-      permission: 'admin:product:edit'
-    },
-    {
-      key: 'toggle',
-      label: isOnSale(row.status) ? '下架' : '上架',
-      permission: 'admin:product:toggle',
-      confirmText: `确认${isOnSale(row.status) ? '下架' : '上架'}该商品吗？`,
-      meta: {
-        nextStatus
-      }
-    },
-    {
-      key: 'delete',
-      label: '删除',
-      type: 'danger',
-      permission: 'admin:product:delete',
-      confirmText: '确认删除该商品吗？删除后不可恢复。'
-    }
-  ];
-}
-
-async function handleRowAction(actionKey, row) {
-  if (actionKey === 'edit') {
-    openEditDialog(row);
-    return;
-  }
-
-  if (actionKey === 'toggle') {
-    // 核心操作逻辑：商品上下架前增加二次确认弹窗，避免误操作
-    const nextStatus = isOnSale(row.status) ? 'off_sale' : 'on_sale';
-    await toggleAdminProductStatusApi(row.id || row.productId, nextStatus);
-    ElMessage.success(nextStatus === 'on_sale' ? '商品上架成功' : '商品下架成功');
-    clearProductCache();
-    loadProductList();
-    return;
-  }
-
-  if (actionKey === 'delete') {
-    await deleteAdminProductApi(row.id || row.productId);
-    ElMessage.success('商品删除成功');
-    clearProductCache();
-    loadProductList();
-  }
+  await submitDialog();
 }
 
 async function handleExportExcel() {
@@ -443,17 +284,6 @@ function normalizeArray(data) {
     return data.items;
   }
   return [];
-}
-
-function resetDialogForm() {
-  dialogForm.id = null;
-  dialogForm.name = '';
-  dialogForm.categoryId = '';
-  dialogForm.price = 99;
-  dialogForm.stock = 1;
-  dialogForm.status = 'on_sale';
-  dialogForm.image = '';
-  dialogForm.description = '';
 }
 
 function formatPrice(value) {

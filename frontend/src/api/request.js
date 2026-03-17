@@ -105,8 +105,9 @@ request.interceptors.request.use(
       openLoading(config.loadingText || '正在加载，请稍候...');
     }
 
-    // 统一注入 Token，后台接口使用 admin_token，前台接口使用 token
-    const token = isAdminRequest ? localStorage.getItem('admin_token') : localStorage.getItem('token');
+    // 统一从 Pinia 读取 Token，避免和路由守卫分别维护本地存储状态
+    const { userStore, adminStore } = getStoreInstances();
+    const token = isAdminRequest ? adminStore?.authToken : userStore?.authToken;
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
