@@ -1,0 +1,25 @@
+export const DEFAULT_ADMIN_PERMISSIONS = [
+  'admin:dashboard:view',
+  'admin:product:view',
+  'admin:product:create',
+  'admin:product:edit',
+  'admin:product:delete',
+  'admin:product:toggle',
+  'admin:product:export',
+  'admin:seckill:view',
+  'admin:seckill:create',
+  'admin:seckill:edit',
+  'admin:seckill:start',
+  'admin:seckill:stop',
+  'admin:seckill:delete',
+  'admin:seckill:export',
+  'admin:order:view',
+  'admin:order:detail',
+  'admin:order:status',
+  'admin:order:refund',
+  'admin:order:export',
+  'admin:user:view',
+  'admin:user:toggle',
+  'admin:user:export'
+];
+

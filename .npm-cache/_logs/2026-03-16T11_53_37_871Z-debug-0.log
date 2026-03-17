@@ -1,0 +1,19 @@
+0 verbose cli E:\Tool\nvm\nodejs\node.exe E:\Tool\nvm\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.22.0
+3 silly config load:file:E:\Tool\nvm\nvm\v22.22.0\node_modules\npm\npmrc
+4 silly config load:file:E:\01XM\demo\20260314\.npmrc
+5 silly config load:file:C:\Users\lipez\.npmrc
+6 silly config load:file:E:\Tool\nvm\npm\etc\npmrc
+7 verbose title npm view @anthropic-ai/claude-code version
+8 verbose argv "view" "@anthropic-ai/claude-code" "version" "--registry" "https://registry.npmjs.org"
+9 verbose logfile logs-max:10 dir:E:\01XM\demo\20260314\.npm-cache\_logs\2026-03-16T11_53_37_871Z-
+10 verbose logfile E:\01XM\demo\20260314\.npm-cache\_logs\2026-03-16T11_53_37_871Z-debug-0.log
+11 silly logfile done cleaning log files
+12 http fetch GET 200 https://registry.npmjs.org/@anthropic-ai%2fclaude-code 4151ms (cache miss)
+13 verbose cwd E:\01XM\demo\20260314
+14 verbose os Windows_NT 10.0.26200
+15 verbose node v22.22.0
+16 verbose npm  v10.9.4
+17 verbose exit 0
+18 info ok

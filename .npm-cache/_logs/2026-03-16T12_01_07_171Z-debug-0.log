@@ -1,0 +1,579 @@
+0 verbose cli E:\Tool\nvm\nodejs\node.exe E:\Tool\nvm\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.4
+2 info using node@v22.22.0
+3 silly config load:file:E:\Tool\nvm\nvm\v22.22.0\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\lipez\.npmrc
+5 silly config load:file:E:\Soft\AI tool\claude-code\etc\npmrc
+6 verbose title npm install @anthropic-ai/claude-code
+7 verbose argv "install" "--global" "@anthropic-ai/claude-code" "--prefix" "E:\\Soft\\AI tool\\claude-code" "--registry" "https://registry.npmjs.org"
+8 verbose logfile logs-max:10 dir:E:\01XM\demo\20260314\.npm-cache\_logs\2026-03-16T12_01_07_171Z-
+9 verbose logfile E:\01XM\demo\20260314\.npm-cache\_logs\2026-03-16T12_01_07_171Z-debug-0.log
+10 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
+11 silly logfile done cleaning log files
+12 silly idealTree buildDeps
+13 silly fetch manifest @anthropic-ai/claude-code@*
+14 silly packumentCache full:https://registry.npmjs.org/@anthropic-ai%2fclaude-code cache-miss
+15 http fetch GET 200 https://registry.npmjs.org/@anthropic-ai%2fclaude-code 1140ms (cache revalidated)
+16 silly packumentCache full:https://registry.npmjs.org/@anthropic-ai%2fclaude-code set size:917073 disposed:false
+17 silly placeDep ROOT @anthropic-ai/claude-code@2.1.76 OK for:  want: *
+18 silly fetch manifest @img/sharp-linux-arm@^0.34.2
+19 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linux-arm cache-miss
+20 silly fetch manifest @img/sharp-linux-x64@^0.34.2
+21 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linux-x64 cache-miss
+22 silly fetch manifest @img/sharp-win32-x64@^0.34.2
+23 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-win32-x64 cache-miss
+24 silly fetch manifest @img/sharp-darwin-x64@^0.34.2
+25 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-darwin-x64 cache-miss
+26 silly fetch manifest @img/sharp-linux-arm64@^0.34.2
+27 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linux-arm64 cache-miss
+28 silly fetch manifest @img/sharp-win32-arm64@^0.34.2
+29 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-win32-arm64 cache-miss
+30 silly fetch manifest @img/sharp-darwin-arm64@^0.34.2
+31 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-darwin-arm64 cache-miss
+32 silly fetch manifest @img/sharp-linuxmusl-x64@^0.34.2
+33 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linuxmusl-x64 cache-miss
+34 silly fetch manifest @img/sharp-linuxmusl-arm64@^0.34.2
+35 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linuxmusl-arm64 cache-miss
+36 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linux-arm 267ms (cache revalidated)
+37 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linux-arm set size:66643 disposed:false
+38 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linuxmusl-arm64 811ms (cache revalidated)
+39 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linuxmusl-arm64 set size:68298 disposed:false
+40 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-darwin-arm64 826ms (cache revalidated)
+41 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-darwin-arm64 set size:66119 disposed:false
+42 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linuxmusl-x64 830ms (cache revalidated)
+43 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linuxmusl-x64 set size:67400 disposed:false
+44 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linux-x64 1330ms (cache revalidated)
+45 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linux-x64 set size:66311 disposed:false
+46 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-linux-arm64 1578ms (cache revalidated)
+47 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-linux-arm64 set size:67207 disposed:false
+48 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-win32-arm64 2562ms (cache revalidated)
+49 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-win32-arm64 set size:23941 disposed:false
+50 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-win32-x64 2734ms (cache revalidated)
+51 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-win32-x64 set size:64388 disposed:false
+52 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-darwin-x64 3160ms (cache revalidated)
+53 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-darwin-x64 set size:65222 disposed:false
+54 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-darwin-arm64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+55 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-darwin-x64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+56 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-linux-arm@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+57 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-linux-arm64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+58 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-linux-x64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+59 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-linuxmusl-arm64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+60 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-linuxmusl-x64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+61 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-win32-arm64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+62 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-win32-x64@0.34.5 OK for: @anthropic-ai/claude-code@2.1.76 want: ^0.34.2
+63 silly fetch manifest @img/sharp-libvips-darwin-arm64@1.2.4
+64 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-darwin-arm64 cache-miss
+65 silly fetch manifest @img/sharp-libvips-darwin-x64@1.2.4
+66 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-darwin-x64 cache-miss
+67 silly fetch manifest @img/sharp-libvips-linux-arm@1.2.4
+68 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm cache-miss
+69 silly fetch manifest @img/sharp-libvips-linux-arm64@1.2.4
+70 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm64 cache-miss
+71 silly fetch manifest @img/sharp-libvips-linux-x64@1.2.4
+72 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linux-x64 cache-miss
+73 silly fetch manifest @img/sharp-libvips-linuxmusl-arm64@1.2.4
+74 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-arm64 cache-miss
+75 silly fetch manifest @img/sharp-libvips-linuxmusl-x64@1.2.4
+76 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-x64 cache-miss
+77 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm64 235ms (cache revalidated)
+78 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm64 set size:55489 disposed:false
+79 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-arm64 234ms (cache revalidated)
+80 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-arm64 set size:54314 disposed:false
+81 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm 243ms (cache revalidated)
+82 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linux-arm set size:58624 disposed:false
+83 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linux-x64 243ms (cache revalidated)
+84 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linux-x64 set size:56678 disposed:false
+85 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-darwin-arm64 248ms (cache revalidated)
+86 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-darwin-arm64 set size:52515 disposed:false
+87 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-x64 292ms (cache revalidated)
+88 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-linuxmusl-x64 set size:53685 disposed:false
+89 http fetch GET 200 https://registry.npmjs.org/@img%2fsharp-libvips-darwin-x64 305ms (cache revalidated)
+90 silly packumentCache full:https://registry.npmjs.org/@img%2fsharp-libvips-darwin-x64 set size:51923 disposed:false
+91 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-libvips-darwin-arm64@1.2.4 OK for: @img/sharp-darwin-arm64@0.34.5 want: 1.2.4
+92 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-libvips-darwin-x64@1.2.4 OK for: @img/sharp-darwin-x64@0.34.5 want: 1.2.4
+93 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-libvips-linux-arm@1.2.4 OK for: @img/sharp-linux-arm@0.34.5 want: 1.2.4
+94 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-libvips-linux-arm64@1.2.4 OK for: @img/sharp-linux-arm64@0.34.5 want: 1.2.4
+95 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-libvips-linux-x64@1.2.4 OK for: @img/sharp-linux-x64@0.34.5 want: 1.2.4
+96 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-libvips-linuxmusl-arm64@1.2.4 OK for: @img/sharp-linuxmusl-arm64@0.34.5 want: 1.2.4
+97 silly placeDep node_modules/@anthropic-ai/claude-code @img/sharp-libvips-linuxmusl-x64@1.2.4 OK for: @img/sharp-linuxmusl-x64@0.34.5 want: 1.2.4
+98 silly reify moves {}
+99 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-libvips-linuxmusl-x64
+100 silly reify mark deleted [
+100 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+100 silly reify ]
+101 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-libvips-linuxmusl-arm64
+102 silly reify mark deleted [
+102 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+102 silly reify ]
+103 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-libvips-linux-x64
+104 silly reify mark deleted [
+104 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-libvips-linux-x64'
+104 silly reify ]
+105 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-libvips-linux-arm64
+106 silly reify mark deleted [
+106 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-libvips-linux-arm64'
+106 silly reify ]
+107 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-libvips-linux-arm
+108 silly reify mark deleted [
+108 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-libvips-linux-arm'
+108 silly reify ]
+109 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-libvips-darwin-x64
+110 silly reify mark deleted [
+110 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-libvips-darwin-x64'
+110 silly reify ]
+111 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-libvips-darwin-arm64
+112 silly reify mark deleted [
+112 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+112 silly reify ]
+113 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-arm64
+114 silly reify mark deleted [
+114 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-win32-arm64'
+114 silly reify ]
+115 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-linuxmusl-x64
+116 silly reify mark deleted [
+116 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-linuxmusl-x64'
+116 silly reify ]
+117 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-linuxmusl-arm64
+118 silly reify mark deleted [
+118 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-linuxmusl-arm64'
+118 silly reify ]
+119 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-linux-x64
+120 silly reify mark deleted [
+120 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-linux-x64'
+120 silly reify ]
+121 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-linux-arm64
+122 silly reify mark deleted [
+122 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-linux-arm64'
+122 silly reify ]
+123 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-linux-arm
+124 silly reify mark deleted [
+124 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-linux-arm'
+124 silly reify ]
+125 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-darwin-x64
+126 silly reify mark deleted [
+126 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-darwin-x64'
+126 silly reify ]
+127 verbose reify failed optional dependency E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-darwin-arm64
+128 silly reify mark deleted [
+128 silly reify   'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-darwin-arm64'
+128 silly reify ]
+129 http cache @anthropic-ai/claude-code@https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.76.tgz 0ms (cache hit)
+130 silly tarball no local data for @anthropic-ai/claude-code@https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.76.tgz. Extracting by manifest.
+131 http cache @img/sharp-win32-x64@https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz 0ms (cache hit)
+132 silly tarball no local data for @img/sharp-win32-x64@https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz. Extracting by manifest.
+133 http fetch GET 200 https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.76.tgz 3818ms (cache miss)
+134 warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\lib\libvips-cpp-8.17.3.dll'
+135 silly tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\lib\libvips-cpp-8.17.3.dll' [Error: ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\lib\libvips-cpp-8.17.3.dll'] {
+135 silly tar   errno: -4058,
+135 silly tar   code: 'ENOENT',
+135 silly tar   syscall: 'open',
+135 silly tar   path: 'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-win32-x64\\lib\\libvips-cpp-8.17.3.dll',
+135 silly tar   entry: ReadEntry {
+135 silly tar     _events: [Object: null prototype] {
+135 silly tar       end: [Function (anonymous)],
+135 silly tar       drain: [Function]
+135 silly tar     },
+135 silly tar     _eventsCount: 2,
+135 silly tar     _maxListeners: undefined,
+135 silly tar     writable: true,
+135 silly tar     readable: true,
+135 silly tar     extended: null,
+135 silly tar     globalExtended: null,
+135 silly tar     header: Header {
+135 silly tar       cksumValid: true,
+135 silly tar       needPax: false,
+135 silly tar       nullBlock: false,
+135 silly tar       block: null,
+135 silly tar       path: 'package/lib/libvips-cpp-8.17.3.dll',
+135 silly tar       mode: 420,
+135 silly tar       uid: null,
+135 silly tar       gid: null,
+135 silly tar       size: 327168,
+135 silly tar       mtime: 1985-10-26T08:15:00.000Z,
+135 silly tar       cksum: 5965,
+135 silly tar       linkpath: '',
+135 silly tar       uname: '',
+135 silly tar       gname: '',
+135 silly tar       devmaj: 0,
+135 silly tar       devmin: 0,
+135 silly tar       atime: null,
+135 silly tar       ctime: null,
+135 silly tar       [Symbol(type)]: '0'
+135 silly tar     },
+135 silly tar     startBlockSize: 327168,
+135 silly tar     blockRemain: 284510,
+135 silly tar     remain: 284510,
+135 silly tar     type: 'File',
+135 silly tar     meta: false,
+135 silly tar     ignore: false,
+135 silly tar     path: 'lib/libvips-cpp-8.17.3.dll',
+135 silly tar     mode: 438,
+135 silly tar     uid: null,
+135 silly tar     gid: null,
+135 silly tar     uname: '',
+135 silly tar     gname: '',
+135 silly tar     size: 327168,
+135 silly tar     mtime: 1985-10-26T08:15:00.000Z,
+135 silly tar     atime: null,
+135 silly tar     ctime: null,
+135 silly tar     linkpath: '',
+135 silly tar     absolute: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64/lib/libvips-cpp-8.17.3.dll',
+135 silly tar     [Symbol(shapeMode)]: false,
+135 silly tar     [Symbol(kCapture)]: false,
+135 silly tar     [Symbol(flowing)]: false,
+135 silly tar     [Symbol(paused)]: true,
+135 silly tar     [Symbol(pipes)]: [ [Pipe] ],
+135 silly tar     [Symbol(buffer)]: [
+135 silly tar       <Buffer 8b 0e 48 89 4c 24 50 48 85 c9 74 06 ff 15 1e f9 02 00 4c 8d 44 24 50 48 8d 15 76 82 03 00 48 8b cb e8 8a 35 00 00 4c 8b c7 48 8d 15 44 82 03 00 48 8b ... 16334 more bytes>,
+135 silly tar       <Buffer 00 00 00 e8 d0 9c 01 00 48 89 70 10 48 ff 43 08 48 8b 4f 08 48 89 38 48 89 48 08 48 89 47 08 48 89 01 48 8b c5 48 8b 5c 24 58 48 8b 6c 24 60 48 8b 74 ... 13968 more bytes>
+135 silly tar     ],
+135 silly tar     [Symbol(objectMode)]: false,
+135 silly tar     [Symbol(encoding)]: null,
+135 silly tar     [Symbol(async)]: false,
+135 silly tar     [Symbol(decoder)]: null,
+135 silly tar     [Symbol(EOF)]: false,
+135 silly tar     [Symbol(emittedEnd)]: false,
+135 silly tar     [Symbol(emittingEnd)]: false,
+135 silly tar     [Symbol(closed)]: false,
+135 silly tar     [Symbol(emittedError)]: null,
+135 silly tar     [Symbol(bufferLength)]: 30402,
+135 silly tar     [Symbol(destroyed)]: false,
+135 silly tar     [Symbol(signal)]: undefined,
+135 silly tar     [Symbol(aborted)]: false
+135 silly tar   },
+135 silly tar   cwd: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64',
+135 silly tar   tarCode: 'TAR_ENTRY_ERROR'
+135 silly tar }
+136 warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\package.json'
+137 silly tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\package.json' [Error: ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\package.json'] {
+137 silly tar   errno: -4058,
+137 silly tar   code: 'ENOENT',
+137 silly tar   syscall: 'open',
+137 silly tar   path: 'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-win32-x64\\package.json',
+137 silly tar   entry: ReadEntry {
+137 silly tar     _events: [Object: null prototype] {},
+137 silly tar     _eventsCount: 0,
+137 silly tar     _maxListeners: undefined,
+137 silly tar     writable: false,
+137 silly tar     readable: false,
+137 silly tar     extended: null,
+137 silly tar     globalExtended: null,
+137 silly tar     header: Header {
+137 silly tar       cksumValid: true,
+137 silly tar       needPax: false,
+137 silly tar       nullBlock: false,
+137 silly tar       block: null,
+137 silly tar       path: 'package/package.json',
+137 silly tar       mode: 420,
+137 silly tar       uid: null,
+137 silly tar       gid: null,
+137 silly tar       size: 908,
+137 silly tar       mtime: 1985-10-26T08:15:00.000Z,
+137 silly tar       cksum: 4968,
+137 silly tar       linkpath: '',
+137 silly tar       uname: '',
+137 silly tar       gname: '',
+137 silly tar       devmaj: 0,
+137 silly tar       devmin: 0,
+137 silly tar       atime: null,
+137 silly tar       ctime: null,
+137 silly tar       [Symbol(type)]: '0'
+137 silly tar     },
+137 silly tar     startBlockSize: 1024,
+137 silly tar     blockRemain: 0,
+137 silly tar     remain: 0,
+137 silly tar     type: 'File',
+137 silly tar     meta: false,
+137 silly tar     ignore: false,
+137 silly tar     path: 'package.json',
+137 silly tar     mode: 438,
+137 silly tar     uid: null,
+137 silly tar     gid: null,
+137 silly tar     uname: '',
+137 silly tar     gname: '',
+137 silly tar     size: 908,
+137 silly tar     mtime: 1985-10-26T08:15:00.000Z,
+137 silly tar     atime: null,
+137 silly tar     ctime: null,
+137 silly tar     linkpath: '',
+137 silly tar     absolute: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64/package.json',
+137 silly tar     [Symbol(shapeMode)]: false,
+137 silly tar     [Symbol(kCapture)]: false,
+137 silly tar     [Symbol(flowing)]: false,
+137 silly tar     [Symbol(paused)]: true,
+137 silly tar     [Symbol(pipes)]: [ [Pipe] ],
+137 silly tar     [Symbol(buffer)]: [],
+137 silly tar     [Symbol(objectMode)]: false,
+137 silly tar     [Symbol(encoding)]: null,
+137 silly tar     [Symbol(async)]: false,
+137 silly tar     [Symbol(decoder)]: null,
+137 silly tar     [Symbol(EOF)]: true,
+137 silly tar     [Symbol(emittedEnd)]: true,
+137 silly tar     [Symbol(emittingEnd)]: false,
+137 silly tar     [Symbol(closed)]: false,
+137 silly tar     [Symbol(emittedError)]: null,
+137 silly tar     [Symbol(bufferLength)]: 0,
+137 silly tar     [Symbol(destroyed)]: false,
+137 silly tar     [Symbol(signal)]: undefined,
+137 silly tar     [Symbol(aborted)]: false
+137 silly tar   },
+137 silly tar   cwd: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64',
+137 silly tar   tarCode: 'TAR_ENTRY_ERROR'
+137 silly tar }
+138 warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\versions.json'
+139 silly tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\versions.json' [Error: ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\versions.json'] {
+139 silly tar   errno: -4058,
+139 silly tar   code: 'ENOENT',
+139 silly tar   syscall: 'open',
+139 silly tar   path: 'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-win32-x64\\versions.json',
+139 silly tar   entry: ReadEntry {
+139 silly tar     _events: [Object: null prototype] {},
+139 silly tar     _eventsCount: 0,
+139 silly tar     _maxListeners: undefined,
+139 silly tar     writable: false,
+139 silly tar     readable: false,
+139 silly tar     extended: null,
+139 silly tar     globalExtended: null,
+139 silly tar     header: Header {
+139 silly tar       cksumValid: true,
+139 silly tar       needPax: false,
+139 silly tar       nullBlock: false,
+139 silly tar       block: null,
+139 silly tar       path: 'package/versions.json',
+139 silly tar       mode: 420,
+139 silly tar       uid: null,
+139 silly tar       gid: null,
+139 silly tar       size: 594,
+139 silly tar       mtime: 1985-10-26T08:15:00.000Z,
+139 silly tar       cksum: 5135,
+139 silly tar       linkpath: '',
+139 silly tar       uname: '',
+139 silly tar       gname: '',
+139 silly tar       devmaj: 0,
+139 silly tar       devmin: 0,
+139 silly tar       atime: null,
+139 silly tar       ctime: null,
+139 silly tar       [Symbol(type)]: '0'
+139 silly tar     },
+139 silly tar     startBlockSize: 1024,
+139 silly tar     blockRemain: 0,
+139 silly tar     remain: 0,
+139 silly tar     type: 'File',
+139 silly tar     meta: false,
+139 silly tar     ignore: false,
+139 silly tar     path: 'versions.json',
+139 silly tar     mode: 438,
+139 silly tar     uid: null,
+139 silly tar     gid: null,
+139 silly tar     uname: '',
+139 silly tar     gname: '',
+139 silly tar     size: 594,
+139 silly tar     mtime: 1985-10-26T08:15:00.000Z,
+139 silly tar     atime: null,
+139 silly tar     ctime: null,
+139 silly tar     linkpath: '',
+139 silly tar     absolute: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64/versions.json',
+139 silly tar     [Symbol(shapeMode)]: false,
+139 silly tar     [Symbol(kCapture)]: false,
+139 silly tar     [Symbol(flowing)]: false,
+139 silly tar     [Symbol(paused)]: true,
+139 silly tar     [Symbol(pipes)]: [ [Pipe] ],
+139 silly tar     [Symbol(buffer)]: [],
+139 silly tar     [Symbol(objectMode)]: false,
+139 silly tar     [Symbol(encoding)]: null,
+139 silly tar     [Symbol(async)]: false,
+139 silly tar     [Symbol(decoder)]: null,
+139 silly tar     [Symbol(EOF)]: true,
+139 silly tar     [Symbol(emittedEnd)]: true,
+139 silly tar     [Symbol(emittingEnd)]: false,
+139 silly tar     [Symbol(closed)]: false,
+139 silly tar     [Symbol(emittedError)]: null,
+139 silly tar     [Symbol(bufferLength)]: 0,
+139 silly tar     [Symbol(destroyed)]: false,
+139 silly tar     [Symbol(signal)]: undefined,
+139 silly tar     [Symbol(aborted)]: false
+139 silly tar   },
+139 silly tar   cwd: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64',
+139 silly tar   tarCode: 'TAR_ENTRY_ERROR'
+139 silly tar }
+140 warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\README.md'
+141 silly tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\README.md' [Error: ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\README.md'] {
+141 silly tar   errno: -4058,
+141 silly tar   code: 'ENOENT',
+141 silly tar   syscall: 'open',
+141 silly tar   path: 'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-win32-x64\\README.md',
+141 silly tar   entry: ReadEntry {
+141 silly tar     _events: [Object: null prototype] {},
+141 silly tar     _eventsCount: 0,
+141 silly tar     _maxListeners: undefined,
+141 silly tar     writable: false,
+141 silly tar     readable: false,
+141 silly tar     extended: null,
+141 silly tar     globalExtended: null,
+141 silly tar     header: Header {
+141 silly tar       cksumValid: true,
+141 silly tar       needPax: false,
+141 silly tar       nullBlock: false,
+141 silly tar       block: null,
+141 silly tar       path: 'package/README.md',
+141 silly tar       mode: 420,
+141 silly tar       uid: null,
+141 silly tar       gid: null,
+141 silly tar       size: 4899,
+141 silly tar       mtime: 1985-10-26T08:15:00.000Z,
+141 silly tar       cksum: 4450,
+141 silly tar       linkpath: '',
+141 silly tar       uname: '',
+141 silly tar       gname: '',
+141 silly tar       devmaj: 0,
+141 silly tar       devmin: 0,
+141 silly tar       atime: null,
+141 silly tar       ctime: null,
+141 silly tar       [Symbol(type)]: '0'
+141 silly tar     },
+141 silly tar     startBlockSize: 5120,
+141 silly tar     blockRemain: 0,
+141 silly tar     remain: 0,
+141 silly tar     type: 'File',
+141 silly tar     meta: false,
+141 silly tar     ignore: false,
+141 silly tar     path: 'README.md',
+141 silly tar     mode: 438,
+141 silly tar     uid: null,
+141 silly tar     gid: null,
+141 silly tar     uname: '',
+141 silly tar     gname: '',
+141 silly tar     size: 4899,
+141 silly tar     mtime: 1985-10-26T08:15:00.000Z,
+141 silly tar     atime: null,
+141 silly tar     ctime: null,
+141 silly tar     linkpath: '',
+141 silly tar     absolute: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64/README.md',
+141 silly tar     [Symbol(shapeMode)]: false,
+141 silly tar     [Symbol(kCapture)]: false,
+141 silly tar     [Symbol(flowing)]: false,
+141 silly tar     [Symbol(paused)]: true,
+141 silly tar     [Symbol(pipes)]: [ [Pipe] ],
+141 silly tar     [Symbol(buffer)]: [],
+141 silly tar     [Symbol(objectMode)]: false,
+141 silly tar     [Symbol(encoding)]: null,
+141 silly tar     [Symbol(async)]: false,
+141 silly tar     [Symbol(decoder)]: null,
+141 silly tar     [Symbol(EOF)]: true,
+141 silly tar     [Symbol(emittedEnd)]: true,
+141 silly tar     [Symbol(emittingEnd)]: false,
+141 silly tar     [Symbol(closed)]: false,
+141 silly tar     [Symbol(emittedError)]: null,
+141 silly tar     [Symbol(bufferLength)]: 0,
+141 silly tar     [Symbol(destroyed)]: false,
+141 silly tar     [Symbol(signal)]: undefined,
+141 silly tar     [Symbol(aborted)]: false
+141 silly tar   },
+141 silly tar   cwd: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64',
+141 silly tar   tarCode: 'TAR_ENTRY_ERROR'
+141 silly tar }
+142 warn tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\lib\sharp-win32-x64.node'
+143 silly tar TAR_ENTRY_ERROR ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\lib\sharp-win32-x64.node' [Error: ENOENT: no such file or directory, open 'E:\Soft\AI tool\claude-code\node_modules\@anthropic-ai\claude-code\node_modules\@img\sharp-win32-x64\lib\sharp-win32-x64.node'] {
+143 silly tar   errno: -4058,
+143 silly tar   code: 'ENOENT',
+143 silly tar   syscall: 'open',
+143 silly tar   path: 'E:\\Soft\\AI tool\\claude-code\\node_modules\\@anthropic-ai\\claude-code\\node_modules\\@img\\sharp-win32-x64\\lib\\sharp-win32-x64.node',
+143 silly tar   entry: ReadEntry {
+143 silly tar     _events: [Object: null prototype] {
+143 silly tar       end: [Function (anonymous)],
+143 silly tar       drain: [Function]
+143 silly tar     },
+143 silly tar     _eventsCount: 2,
+143 silly tar     _maxListeners: undefined,
+143 silly tar     writable: true,
+143 silly tar     readable: true,
+143 silly tar     extended: null,
+143 silly tar     globalExtended: null,
+143 silly tar     header: Header {
+143 silly tar       cksumValid: true,
+143 silly tar       needPax: false,
+143 silly tar       nullBlock: false,
+143 silly tar       block: null,
+143 silly tar       path: 'package/lib/sharp-win32-x64.node',
+143 silly tar       mode: 420,
+143 silly tar       uid: null,
+143 silly tar       gid: null,
+143 silly tar       size: 433152,
+143 silly tar       mtime: 1985-10-26T08:15:00.000Z,
+143 silly tar       cksum: 5884,
+143 silly tar       linkpath: '',
+143 silly tar       uname: '',
+143 silly tar       gname: '',
+143 silly tar       devmaj: 0,
+143 silly tar       devmin: 0,
+143 silly tar       atime: null,
+143 silly tar       ctime: null,
+143 silly tar       [Symbol(type)]: '0'
+143 silly tar     },
+143 silly tar     startBlockSize: 433152,
+143 silly tar     blockRemain: 421183,
+143 silly tar     remain: 421183,
+143 silly tar     type: 'File',
+143 silly tar     meta: false,
+143 silly tar     ignore: false,
+143 silly tar     path: 'lib/sharp-win32-x64.node',
+143 silly tar     mode: 438,
+143 silly tar     uid: null,
+143 silly tar     gid: null,
+143 silly tar     uname: '',
+143 silly tar     gname: '',
+143 silly tar     size: 433152,
+143 silly tar     mtime: 1985-10-26T08:15:00.000Z,
+143 silly tar     atime: null,
+143 silly tar     ctime: null,
+143 silly tar     linkpath: '',
+143 silly tar     absolute: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64/lib/sharp-win32-x64.node',
+143 silly tar     [Symbol(shapeMode)]: false,
+143 silly tar     [Symbol(kCapture)]: false,
+143 silly tar     [Symbol(flowing)]: false,
+143 silly tar     [Symbol(paused)]: true,
+143 silly tar     [Symbol(pipes)]: [ [Pipe] ],
+143 silly tar     [Symbol(buffer)]: [
+143 silly tar       <Buffer 00 48 33 cc e8 ee ca 02 00 48 8b 9c 24 d0 00 00 00 48 81 c4 a0 00 00 00 41 5e 5f 5e c3 48 8d 15 53 58 05 00 48 8d 0d 64 58 05 00 e8 a7 fa ff ff cc 48 ... 2822 more bytes>
+143 silly tar     ],
+143 silly tar     [Symbol(objectMode)]: false,
+143 silly tar     [Symbol(encoding)]: null,
+143 silly tar     [Symbol(async)]: false,
+143 silly tar     [Symbol(decoder)]: null,
+143 silly tar     [Symbol(EOF)]: false,
+143 silly tar     [Symbol(emittedEnd)]: false,
+143 silly tar     [Symbol(emittingEnd)]: false,
+143 silly tar     [Symbol(closed)]: false,
+143 silly tar     [Symbol(emittedError)]: null,
+143 silly tar     [Symbol(bufferLength)]: 2872,
+143 silly tar     [Symbol(destroyed)]: false,
+143 silly tar     [Symbol(signal)]: undefined,
+143 silly tar     [Symbol(aborted)]: false
+143 silly tar   },
+143 silly tar   cwd: 'E:/Soft/AI tool/claude-code/node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64',
+143 silly tar   tarCode: 'TAR_ENTRY_ERROR'
+143 silly tar }
+144 http fetch GET 200 https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz 235811ms (cache miss)
+145 silly ADD node_modules/@anthropic-ai/claude-code
+146 silly ADD
+147 silly ADD
+148 silly ADD
+149 silly ADD
+150 silly ADD
+151 silly ADD
+152 silly ADD
+153 silly ADD node_modules/@anthropic-ai/claude-code/node_modules/@img/sharp-win32-x64
+154 silly ADD
+155 silly ADD
+156 silly ADD
+157 silly ADD
+158 silly ADD
+159 silly ADD
+160 silly ADD
+161 silly ADD
+162 verbose cwd E:\01XM\demo\20260314
+163 verbose os Windows_NT 10.0.26200
+164 verbose node v22.22.0
+165 verbose npm  v10.9.4
+166 verbose exit 0
+167 info ok

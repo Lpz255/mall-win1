@@ -1,0 +1,121 @@
+2026-03-17 00:01:53.921 [http-nio-8080-exec-8] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=409, message=璇峰嬁閲嶅绉掓潃
+2026-03-17 00:02:01.876 [http-nio-8080-exec-10] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=409, message=璇峰嬁閲嶅绉掓潃
+2026-03-17 00:05:24.294 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-17 00:05:24.299 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-17 00:05:30.679 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17 with PID 18036 (E:\01XM\demo\20260314\target\classes started by lipez in E:\01XM\demo\20260314)
+2026-03-17 00:05:30.682 [main] INFO  com.example.demo.DemoApplication - The following 1 profile is active: "dev"
+2026-03-17 00:05:31.118 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-17 00:05:31.119 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-17 00:05:31.139 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-03-17 00:05:31.548 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-17 00:05:31.554 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:05:31.557 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-17 00:05:31.557 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-17 00:05:31.613 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-17 00:05:31.613 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 899 ms
+2026-03-17 00:05:32.412 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-17 00:05:32.508 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71d0b8a4
+2026-03-17 00:05:32.508 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-17 00:05:32.803 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:05:32.814 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-03-17 00:05:32.821 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.414 seconds (process running for 2.769)
+2026-03-17 00:05:34.962 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-17 00:05:34.962 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-17 00:05:34.964 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-17 00:06:30.988 [http-nio-8080-exec-4] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=401, message=管理员登录状态已失效，请重新登录
+2026-03-17 00:12:47.905 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-17 00:12:47.911 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-17 00:14:03.983 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17 with PID 33848 (E:\01XM\demo\20260314\target\classes started by lipez in E:\01XM\demo\20260314)
+2026-03-17 00:14:03.985 [main] INFO  com.example.demo.DemoApplication - The following 1 profile is active: "dev"
+2026-03-17 00:14:04.429 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-17 00:14:04.430 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-17 00:14:04.448 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-03-17 00:14:04.863 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-17 00:14:04.869 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:14:04.872 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-17 00:14:04.872 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-17 00:14:04.930 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-17 00:14:04.930 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 914 ms
+2026-03-17 00:14:05.739 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-17 00:14:05.838 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@71d0b8a4
+2026-03-17 00:14:05.839 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-17 00:14:06.147 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:14:06.158 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-03-17 00:14:06.166 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.462 seconds (process running for 2.808)
+2026-03-17 00:14:28.412 [http-nio-8080-exec-4] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-17 00:14:28.412 [http-nio-8080-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-17 00:14:28.414 [http-nio-8080-exec-4] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-17 00:14:39.805 [http-nio-8080-exec-5] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=404, message=用户不存在
+2026-03-17 00:14:44.347 [http-nio-8080-exec-6] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=404, message=用户不存在
+2026-03-17 00:14:47.413 [http-nio-8080-exec-8] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=404, message=用户不存在
+2026-03-17 00:15:20.276 [http-nio-8080-exec-10] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=401, message=管理员登录状态已失效，请重新登录
+2026-03-17 00:19:12.656 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-17 00:19:12.661 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-17 00:19:18.921 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17 with PID 18784 (E:\01XM\demo\20260314\target\classes started by lipez in E:\01XM\demo\20260314)
+2026-03-17 00:19:18.922 [main] INFO  com.example.demo.DemoApplication - The following 1 profile is active: "dev"
+2026-03-17 00:19:19.362 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-17 00:19:19.364 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-17 00:19:19.383 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2026-03-17 00:19:19.783 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-17 00:19:19.789 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:19:19.791 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-17 00:19:19.792 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-17 00:19:19.847 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-17 00:19:19.848 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 894 ms
+2026-03-17 00:19:20.646 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-17 00:19:20.738 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@369fb99a
+2026-03-17 00:19:20.740 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-17 00:19:21.036 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:19:21.047 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-03-17 00:19:21.054 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.417 seconds (process running for 2.786)
+2026-03-17 00:19:31.939 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-17 00:19:31.940 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-17 00:19:31.942 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-17 00:19:31.976 [http-nio-8080-exec-1] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=401, message=管理员登录状态已失效，请重新登录
+2026-03-17 00:20:02.610 [http-nio-8080-exec-4] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=404, message=用户不存在
+2026-03-17 00:30:15.707 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-17 00:30:15.712 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-17 00:31:48.323 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17 with PID 14896 (E:\01XM\demo\20260314\target\classes started by lipez in E:\01XM\demo\20260314)
+2026-03-17 00:31:48.325 [main] INFO  com.example.demo.DemoApplication - The following 1 profile is active: "dev"
+2026-03-17 00:31:48.738 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-17 00:31:48.740 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-17 00:31:48.759 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2026-03-17 00:31:49.152 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-17 00:31:49.159 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:31:49.161 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-17 00:31:49.161 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-17 00:31:49.215 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-17 00:31:49.216 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 862 ms
+2026-03-17 00:31:49.677 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-17 00:31:49.775 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24018c8b
+2026-03-17 00:31:49.776 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-17 00:31:50.442 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:31:50.467 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-03-17 00:31:50.474 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.402 seconds (process running for 2.726)
+2026-03-17 00:32:11.804 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-17 00:32:11.804 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-17 00:32:11.806 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-03-17 00:33:34.947 [http-nio-8080-exec-9] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=401, message=管理员登录状态已失效，请重新登录
+2026-03-17 00:41:04.636 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-17 00:41:04.641 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-17 00:41:10.716 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication using Java 17 with PID 13276 (E:\01XM\demo\20260314\target\classes started by lipez in E:\01XM\demo\20260314)
+2026-03-17 00:41:10.716 [main] INFO  com.example.demo.DemoApplication - The following 1 profile is active: "dev"
+2026-03-17 00:41:11.127 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2026-03-17 00:41:11.128 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-03-17 00:41:11.147 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2026-03-17 00:41:11.535 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-03-17 00:41:11.541 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:41:11.543 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-17 00:41:11.543 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-17 00:41:11.597 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-03-17 00:41:11.597 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 853 ms
+2026-03-17 00:41:12.072 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-17 00:41:12.166 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4a453f8d
+2026-03-17 00:41:12.166 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-17 00:41:12.767 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2026-03-17 00:41:12.778 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2026-03-17 00:41:12.784 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.315 seconds (process running for 2.631)
+2026-03-17 00:41:14.470 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-17 00:41:14.471 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-17 00:41:14.472 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-03-17 00:41:14.507 [http-nio-8080-exec-1] WARN  com.example.demo.config.GlobalExceptionHandler - 业务异常，code=401, message=管理员登录状态已失效，请重新登录
