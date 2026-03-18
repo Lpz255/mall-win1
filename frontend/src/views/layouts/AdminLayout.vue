@@ -17,7 +17,7 @@
     </el-aside>
 
     <el-container>
-      <el-header class="admin-header">
+      <el-header :class="['admin-header', { 'admin-header-monitor': isMonitorRoute }]">
         <div class="header-left">
           <h1>{{ pageTitle }}</h1>
         </div>
@@ -28,7 +28,7 @@
         </div>
       </el-header>
 
-      <el-main class="admin-main">
+      <el-main :class="['admin-main', { 'admin-main-monitor': isMonitorRoute }]">
         <router-view />
       </el-main>
     </el-container>
@@ -49,6 +49,7 @@ const { hasPermission } = useAdminPermission();
 
 const rawMenuItems = [
   { label: '数据概览', path: '/admin/index', permission: 'admin:dashboard:view' },
+  { label: '监控看板', path: '/admin/monitor', permission: 'admin:dashboard:view' },
   { label: '商品管理', path: '/admin/product', permission: 'admin:product:view' },
   { label: '秒杀管理', path: '/admin/seckill', permission: 'admin:seckill:view' },
   { label: '订单管理', path: '/admin/order', permission: 'admin:order:view' },
@@ -59,6 +60,7 @@ const menuItems = computed(() => rawMenuItems.filter((item) => hasPermission(ite
 const activeMenu = computed(() => route.path);
 const displayName = computed(() => adminStore.adminInfo?.name || adminStore.adminInfo?.username || '管理员');
 const pageTitle = computed(() => route.meta?.title || '运营后台');
+const isMonitorRoute = computed(() => route.name === 'AdminMonitor');
 
 function goWebSite() {
   router.push('/web/index');
@@ -107,6 +109,16 @@ function handleLogout() {
   background: #fff;
 }
 
+.admin-header-monitor {
+  border-bottom-color: rgba(51, 65, 85, 0.56);
+  background: linear-gradient(180deg, #0b1525, #0a1220);
+}
+
+.admin-header-monitor .header-left h1,
+.admin-header-monitor .admin-name {
+  color: #e2e8f0;
+}
+
 .header-left h1 {
   color: #0f172a;
   font-size: 20px;
@@ -132,6 +144,17 @@ function handleLogout() {
     radial-gradient(circle at 0% 0%, rgba(22, 119, 255, 0.08), transparent 28%),
     radial-gradient(circle at 100% 100%, rgba(255, 122, 0, 0.08), transparent 28%),
     #f5f7fb;
+}
+
+.admin-main-monitor {
+  padding: 0;
+  background: #050d19;
+}
+
+@media (max-width: 900px) {
+  .admin-main-monitor {
+    padding: 0;
+  }
 }
 </style>
 

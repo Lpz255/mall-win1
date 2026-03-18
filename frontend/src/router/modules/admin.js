@@ -28,6 +28,17 @@ export const adminRoutes = {
       }
     },
     {
+      path: 'monitor',
+      name: 'AdminMonitor',
+      component: () => import('@/views/admin/AdminMonitor.vue'),
+      meta: {
+        title: '监控看板',
+        requiresAuth: true,
+        requiresAdmin: true,
+        permission: 'admin:dashboard:view'
+      }
+    },
+    {
       path: 'product',
       name: 'AdminProduct',
       component: () => import('@/views/admin/AdminProduct.vue'),

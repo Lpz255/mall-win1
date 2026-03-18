@@ -5,3 +5,11 @@ export function getAdminOverviewApi(params = {}) {
   return request.get('/admin/stats/overview', { params });
 }
 
+// 后台监控看板
+export function getAdminMonitorApi(params = {}) {
+  return request.get('/admin/stats/monitor', {
+    params,
+    showLoading: false
+  });
+}
+
